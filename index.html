@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: This is the title shown on the browser tab -->
+  <title>Carlos Kalet Seaborn | Memorable</title>
+
+  <style>
+    /* ---------- COLORS (change them here, in one place) ---------- */
+    :root {
+      --azure: #2a567d;
+      --light-azure: #deebf1;
+      --gray-azure: #96a4ae;
+      --page-bg: #06142a;   /* dark blue page background */
+      --card-bg: #0d2440;   /* slightly lighter dark blue for the card */
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: var(--page-bg);
+      color: var(--light-azure);
+      /* One clean font that is already on every device (nothing to download) */
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    /* ---------- THE CARD ---------- */
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      border: 1px solid var(--azure);
+      border-radius: 20px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Spacing between sections */
+    .card > * + * { margin-top: 28px; }
+
+    /* ---------- PROFILE PHOTO ---------- */
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;        /* makes it a circle */
+      object-fit: cover;         /* crops to fill the circle without stretching */
+      border: 3px solid var(--azure);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---------- TEXT ---------- */
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 700;          /* bolder heading */
+      line-height: 1.2;
+      color: #fff;
+    }
+    .business {
+      margin: 8px 0 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--light-azure);
+    }
+    .tagline {
+      margin: 8px 0 0;
+      font-size: 0.95rem;
+      font-weight: 400;          /* lighter body text */
+      color: var(--gray-azure);
+    }
+
+    /* ---------- LOGO ---------- */
+    .logo {
+      width: 100%;
+      max-width: 240px;          /* modest size */
+      height: auto;              /* keeps the proportions, no stretching */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+    }
+
+    /* ---------- CONTACT BUTTONS ---------- */
+    .contact { display: grid; gap: 12px; }
+    .contact a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--azure);
+      color: var(--light-azure);
+      text-decoration: none;
+      font-weight: 500;
+      overflow-wrap: anywhere;   /* stops long emails from overflowing */
+    }
+    .contact a:hover,
+    .contact a:focus-visible {
+      background: var(--light-azure);
+      color: var(--azure);
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+
+    <!-- 1. PROFILE PHOTO -->
+    <!-- EDIT: the photo filename is in src="profile.jpg". If your file is named differently
+         (for example my-photo.png), change ONLY the part inside the quotes.
+         Line to swap in: <img class="profile-photo" src="YOUR-FILE-NAME.jpg" alt="..."> -->
+    <img class="profile-photo" src="images/Selife.jpeg" alt="Portrait of Carlos Kalet Seaborn">
+
+    <!-- 2, 3, 4. NAME, BUSINESS, TAGLINE -->
+    <header>
+      <!-- EDIT: your name -->
+      <h1>Carlos Kalet Seaborn</h1>
+      <!-- EDIT: your business name -->
+      <p class="business">Memorable</p>
+      <!-- EDIT: your tagline -->
+      <p class="tagline">Personal messages when they need it most</p>
+    </header>
+
+    <!-- 5. LOGO -->
+    <!-- EDIT: the logo filename is in src="logo.png". If your file is named differently,
+         change ONLY the part inside the quotes.
+         Line to swap in: <img class="logo" src="YOUR-LOGO-NAME.png" alt="..."> -->
+    <img class="logo" src="images/memorable-logo-icon.png" alt="Memorable logo: a shield with a QR code, a keyhole and an infinity symbol">
+
+    <!-- 6 and 7. PHONE AND EMAIL -->
+    <nav class="contact" aria-label="Contact">
+      <!-- EDIT: phone. Change the number in href="tel:..." (digits and + only, no spaces)
+           AND the text shown between the > < symbols. -->
+      <a href="tel:+16292442902">Call +1 (629) 244-2902</a>
+
+      <!-- EDIT: email. Change it in href="mailto:..." AND in the visible text. -->
+      <a href="mailto:tonewpathways@gmail.com">tonewpathways@gmail.com</a>
+    </nav>
+
+  </main>
+</body>
+</html>
